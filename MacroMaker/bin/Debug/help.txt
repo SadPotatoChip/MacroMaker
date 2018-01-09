@@ -1,0 +1,116 @@
+Info:
+This application runs in the background and listens to keyboard input. Upon getting an input that is equal to the input_proc of a command given in the commands.txt file it will press the key combination given by the execution_combination of the command.
+The application will not block the initial input even if it is equal to the input_proc of a command.
+It is not recommended to bind multiple commands to the same input proc as the resulting key input from the application can vary.
+
+
+List commands in the commands.txt files in the command format to execute them (each command in a new line). 
+
+reserved commands:
+	^+%10 - ctrl shift f10 = show/hide console
+	^+%11 - ctrl shift f11 = reload command.txt
+
+command format:
+	description=input_proc=execution_combination
+
+	description serves as a reminder to the user as to the name of the command.
+	proc_input is the combination of keys required to be pressed for the execution_combination to be executed
+	execution_combination is the sequence of keys the user wants to send to the currently focused application
+
+input_proc format:
+	letters:
+		Capitalized letter A-Z
+	special character and punctuation keys:
+		that key without shift
+	scroll keys:
+		&1=delete
+		&2=insert
+		&3=printscreen
+		&4=end
+		&5=home
+		&6=scrolllock
+		&7=pagedown
+		&8=pagedown
+		&9=pause		
+	special keys:
+		^ = lcontrol
+		~ = ~
+		# = widndows key
+		+ = shift	
+		| = tab
+		> = enter
+		< = backspace
+		_ = space
+		function keys:
+			format %xy
+			example: F7=%07
+		number keys:
+			format $x
+			example: key for the number 1= $1
+execution_combination:
+	letters and numbers:
+		any letter or number
+	special character and punctuation keys:
+		that key without shift
+	scroll keys:
+		&1=delete
+		&2=insert
+		&3=printscreen
+		&4=end
+		&5=home
+		&6=scrolllock
+		&7=pagedown
+		&8=pagedown
+		&9=pause
+	arrow keys:
+		!L=left
+		!R=right
+		!U=up
+		!D=down
+	special keys:
+		^ = lcontrol
+		~ = ~
+		# = widndows key
+		+ = shift
+		| = tab
+		_ = space
+		> = enter
+		< = backspace
+
+		
+	pauses:
+		? will pause input for 200ms
+		?{n} will pause the input for n ms 
+	holding a key down:
+		format:key(othercommands)
+		example: ^(123) the command will hold down the control key, press the 1,2 and 3 keys and relese control
+			 ^(1(23)) the command will hold down control, then hold down 1 and press 2 and 3
+	
+
+Examples:
+	command:
+		example1=^~=#(3)^(3) 
+	explanation:
+		upon pressing the ~ and control key, the application will send the input "winKeyDown,3keyPress,winKeyUp,controlKeyDown,3keyPress,controlKeyUp" to the currently focused application.
+	
+	command:
+		send message=^+7=+(h)ey_i_am_busy_at_the_moment_i_will_reply_later>
+	explanation:
+		upon pressing shift+control+7 the application types the message "Hey i am busy at the moment i will reply later" and then presses enter.
+	
+	command:
+		needlessly complicated combo=^F05=#(+(c?{100}o?{525}m?{23}b?o))
+	explanation:
+		upon pressing control+F5 the application holds down the windows and shift keys while pressing the specified keys with the corresponding delays in between.
+
+	command:
+		writeline=~=+(c)onsole.+(o)ut.+(w)rite+(l)ine+(90);!L!L
+	explanation:
+		writes Console.Out.WriteLine(); and positions the cursor after (
+
+
+For any further information contact me at 99nine66@gmail.com
+
+
+
+		

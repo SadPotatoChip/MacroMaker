@@ -1,0 +1,10 @@
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\MacroMaker.exe.config
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\MacroMaker.exe
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\MacroMaker.pdb
+E:\visual studio proj\mine\MacroMaker\MacroMaker\obj\Debug\MacroMaker.csproj.CoreCompileInputs.cache
+E:\visual studio proj\mine\MacroMaker\MacroMaker\obj\Debug\MacroMaker.exe
+E:\visual studio proj\mine\MacroMaker\MacroMaker\obj\Debug\MacroMaker.pdb
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\WindowsInput.dll
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\WindowsInput.xml
+E:\visual studio proj\mine\MacroMaker\MacroMaker\bin\Debug\WindowsInput.pdb
+E:\visual studio proj\mine\MacroMaker\MacroMaker\obj\Debug\MacroMaker.csprojResolveAssemblyReference.cache
